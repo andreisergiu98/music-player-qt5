@@ -72,6 +72,7 @@ void MainWindow::on_save_clicked()
 void MainWindow::on_listWidget_doubleClicked(const QModelIndex &index)
 {
     loadTrack();
+    lCounter = getIndex();
     player->play();
     ui->play->setChecked(false);
 }
