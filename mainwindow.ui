@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>936</width>
-    <height>515</height>
+    <height>509</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -70,7 +70,7 @@
    <widget class="QPushButton" name="play">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>49</x>
       <y>470</y>
       <width>41</width>
       <height>31</height>
@@ -89,7 +89,7 @@
    <widget class="QPushButton" name="forward">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>88</x>
       <y>470</y>
       <width>41</width>
       <height>31</height>
@@ -106,7 +106,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>30</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -122,7 +122,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
+      <y>60</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -189,7 +189,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>420</y>
+      <y>400</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -208,7 +208,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
+      <y>370</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -226,10 +226,10 @@
    <widget class="QSlider" name="volumeBar">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>130</y>
+      <x>22</x>
+      <y>150</y>
       <width>16</width>
-      <height>201</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="focusPolicy">
