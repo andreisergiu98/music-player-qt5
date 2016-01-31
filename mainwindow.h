@@ -49,6 +49,8 @@ private slots:
 
     void update();
 
+    void on_searchBar_textChanged(const QString &arg1);
+
 private:
     void updateList();
 

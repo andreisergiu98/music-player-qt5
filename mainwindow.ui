@@ -106,7 +106,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>10</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -122,7 +122,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
+      <y>50</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -138,7 +138,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>140</y>
+      <y>90</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -179,9 +179,9 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>10</y>
+      <y>50</y>
       <width>871</width>
-      <height>441</height>
+      <height>401</height>
      </rect>
     </property>
    </widget>
@@ -227,9 +227,9 @@
     <property name="geometry">
      <rect>
       <x>21</x>
-      <y>185</y>
-      <width>17</width>
-      <height>141</height>
+      <y>130</y>
+      <width>16</width>
+      <height>201</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -279,10 +279,19 @@
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLineEdit" name="searchBar">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>871</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>
-

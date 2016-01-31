@@ -4,7 +4,7 @@
 #include "QDesktopServices"
 #include "algorithm"
 #include "iostream"
-#include "sstream"
+#include "string"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -220,4 +220,17 @@ void MainWindow::loadTrack()
      player->setMedia(QUrl::fromLocalFile(qstr));
      qstr = QString::fromStdString(playlist.tracks[getIndex()].getName());
      ui->currentSong->setText(qstr);
+}
+
+void MainWindow::on_searchBar_textChanged(const QString &arg1)
+{
+    for(int i = 0; i < ui->listWidget->count(); i++)
+    {
+        if(ui->listWidget->item(i)->text().toLower().toStdString().find(arg1.toLower().toStdString()) != string::npos )
+        {
+            ui->listWidget->setCurrentRow(i);
+            break;
+        }
+    }
+
 }
