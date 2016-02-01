@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>936</width>
-    <height>509</height>
+    <height>534</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,9 +29,9 @@
    <widget class="QSlider" name="seekBar">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>8</x>
       <y>475</y>
-      <width>781</width>
+      <width>921</width>
       <height>20</height>
      </rect>
     </property>
@@ -54,8 +54,8 @@
    <widget class="QPushButton" name="back">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>470</y>
+      <x>398</x>
+      <y>495</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -70,8 +70,8 @@
    <widget class="QPushButton" name="play">
     <property name="geometry">
      <rect>
-      <x>49</x>
-      <y>470</y>
+      <x>448</x>
+      <y>495</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -85,12 +85,15 @@
     <property name="checkable">
      <bool>true</bool>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="forward">
     <property name="geometry">
      <rect>
-      <x>88</x>
-      <y>470</y>
+      <x>497</x>
+      <y>495</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -105,10 +108,10 @@
    <widget class="QPushButton" name="add">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>30</y>
+      <x>840</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -121,10 +124,10 @@
    <widget class="QPushButton" name="remove">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>60</y>
+      <x>770</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -137,10 +140,10 @@
    <widget class="QPushButton" name="save">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>90</y>
+      <x>700</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -162,8 +165,8 @@
    <widget class="QLabel" name="currentSong">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>457</y>
+      <x>148</x>
+      <y>460</y>
       <width>641</width>
       <height>20</height>
      </rect>
@@ -178,20 +181,41 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>8</x>
       <y>50</y>
-      <width>871</width>
+      <width>921</width>
       <height>401</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::DoubleClicked</set>
+    </property>
+    <property name="showDropIndicator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="movement">
+     <enum>QListView::Static</enum>
+    </property>
+    <property name="viewMode">
+     <enum>QListView::ListMode</enum>
+    </property>
+    <property name="currentRow">
+     <number>-1</number>
     </property>
    </widget>
    <widget class="QPushButton" name="repeat">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>400</y>
+      <x>570</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -207,10 +231,10 @@
    <widget class="QPushButton" name="shuffle">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>370</y>
+      <x>325</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -226,10 +250,10 @@
    <widget class="QSlider" name="volumeBar">
     <property name="geometry">
      <rect>
-      <x>22</x>
-      <y>150</y>
-      <width>16</width>
-      <height>161</height>
+      <x>110</x>
+      <y>503</y>
+      <width>181</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -242,7 +266,7 @@
      <number>100</number>
     </property>
     <property name="orientation">
-     <enum>Qt::Vertical</enum>
+     <enum>Qt::Horizontal</enum>
     </property>
     <property name="invertedAppearance">
      <bool>false</bool>
@@ -254,10 +278,10 @@
    <widget class="QPushButton" name="mute">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>340</y>
+      <x>50</x>
+      <y>500</y>
       <width>41</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -282,11 +306,23 @@
    <widget class="QLineEdit" name="searchBar">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>8</x>
       <y>10</y>
-      <width>871</width>
+      <width>921</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>

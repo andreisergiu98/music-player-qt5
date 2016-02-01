@@ -31,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -71,10 +73,13 @@ void MainWindow::on_save_clicked()
 
 void MainWindow::on_listWidget_doubleClicked(const QModelIndex &index)
 {
-    loadTrack();
     lCounter = getIndex();
-    player->play();
+
     ui->play->setChecked(false);
+    ui->searchBar->clear();
+
+    loadTrack();
+    player->play();
 }
 
 
@@ -168,6 +173,43 @@ int MainWindow::getIndex()
     return ui->listWidget->currentIndex().row();
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    switch (event->key()) {
+    case Qt::Key_Return :
+    {
+        lCounter = getIndex();
+        if(lCounter != -1)
+        {
+            ui->play->setChecked(false);
+            ui->searchBar->clear();
+
+           loadTrack();
+           player->play();
+        }
+        break;
+    }
+    case Qt::Key_Up :
+    {
+        int ind = getIndex() - 1;if(ind < 0)ind = ui->listWidget->count() - 1;
+        ui->listWidget->setCurrentRow(ind);
+        break;
+    }
+    case Qt::Key_Down :
+    {
+        int ind = getIndex() + 1;if(ind >= ui->listWidget->count())ind = 0;
+        ui->listWidget->setCurrentRow(ind);
+        break;
+    }
+    default :
+    {
+        ui->searchBar->setFocus();
+
+        break;
+    }
+    }
+}
+
 void MainWindow::next()
 {
     lCounter++;
@@ -182,9 +224,12 @@ void MainWindow::next()
 
     (!shuffle or repeat) ? ui->listWidget->setCurrentRow(lCounter) : ui->listWidget->setCurrentRow(shuffledPlaylist[lCounter]);
 
-    loadTrack();
     ui->play->setChecked(false);
+    ui->searchBar->clear();
+
+    loadTrack();
     player->play();
+
 }
 
 void MainWindow::back()
@@ -197,8 +242,10 @@ void MainWindow::back()
 
      (!shuffle) ? ui->listWidget->setCurrentRow(lCounter) : ui->listWidget->setCurrentRow(shuffledPlaylist[lCounter]);
 
-     loadTrack();
      ui->play->setChecked(false);
+     ui->searchBar->clear();
+
+     loadTrack();
      player->play();
 }
 
@@ -224,6 +271,7 @@ void MainWindow::loadTrack()
 
 void MainWindow::on_searchBar_textChanged(const QString &arg1)
 {
+    if(ui->searchBar->text().toStdString() != "")
     for(int i = 0; i < ui->listWidget->count(); i++)
     {
         if(ui->listWidget->item(i)->text().toLower().toStdString().find(arg1.toLower().toStdString()) != string::npos )

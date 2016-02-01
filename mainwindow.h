@@ -7,6 +7,8 @@
 #include "QTimer"
 #include "QPalette"
 #include "vector"
+#include "QKeyEvent"
+#include "QLineEdit"
 
 using namespace std;
 
@@ -81,6 +83,9 @@ private:
     QMediaPlayer *player = new QMediaPlayer();
 
     vector<unsigned short int> shuffledPlaylist;
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 
 };
 
