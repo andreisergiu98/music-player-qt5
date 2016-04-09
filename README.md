@@ -9,3 +9,4 @@ Simple music player made in Qt.
 ## Screenshots
 
 ![sh](http://i.imgur.com/vQWAJIf.png)
+![sh2](http://i.imgur.com/98nD251.png)
